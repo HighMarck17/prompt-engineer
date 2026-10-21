@@ -1,0 +1,14 @@
+{
+  "name": "prompt-engineer",
+  "owner": {
+    "name": "HighMarck (M.S.)"
+  },
+  "description": "Marketplace for prompt-engineer, a Claude Code plugin that writes prompts and attacks them before you ship them.",
+  "plugins": [
+    {
+      "name": "prompt-engineer",
+      "source": "./plugins/prompt-engineer",
+      "description": "Write or optimize a prompt: it asks for the rules it cannot infer, then attacks the draft against its spec."
+    }
+  ]
+}
