@@ -8,6 +8,9 @@
   },
   "homepage": "https://github.com/HighMarck17/prompt-engineer",
   "repository": "https://github.com/HighMarck17/prompt-engineer",
+  "documentationUrl": "https://github.com/HighMarck17/prompt-engineer#readme",
+  "supportUrl": "https://github.com/HighMarck17/prompt-engineer/issues",
+  "privacyPolicyUrl": "https://github.com/HighMarck17/prompt-engineer/blob/main/plugins/prompt-engineer/README.md#what-it-runs",
   "license": "MIT",
   "keywords": [
     "prompt-engineering",
