@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags: ["prompt-engineer--v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Validate the plugin and attach the skill zip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Validate the marketplace and the plugin
+        run: |
+          npm install -g @anthropic-ai/claude-code@2.1.299
+          claude plugin validate --strict .
+          claude plugin validate --strict plugins/prompt-engineer
+      - name: Zip the skill folder for claude.ai
+        run: |
+          cd plugins/prompt-engineer/skills
+          zip -r "$GITHUB_WORKSPACE/refine-prompt.zip" refine-prompt
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" refine-prompt.zip --title "prompt-engineer ${GITHUB_REF_NAME#prompt-engineer--v}" --generate-notes
