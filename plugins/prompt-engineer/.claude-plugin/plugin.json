@@ -1,6 +1,6 @@
 {
   "name": "prompt-engineer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Write or optimize a prompt for a target model: it asks for the rules it cannot infer, attacks the draft against the spec, and returns the fixed prompt with a short answer on whether it is effective and optimized.",
   "author": {
     "name": "HighMarck (M.S.)",
