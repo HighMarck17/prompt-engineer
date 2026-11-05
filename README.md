@@ -22,7 +22,7 @@ Everything happens in your conversation: no subagents, and nothing written to di
 
 ## Why one agent is enough
 
-The first version was a pipeline of five agents: it cost 3.81 to 5.52 USD and 15 to 23 minutes per prompt, and a blind judge scored its prompts no higher than one agent's; a separate red-teamer and a researcher went later, when tests showed no loss without them. What ships is one agent that asks up to three questions, writes a spec and attacks its own draft: on two agent cases its prompts passed 83% of the sessions, at 0.39 to 0.45 USD and 71 to 104 s per prompt. Claude without the skill passed 65% given the full notes, and 77%, close to the skill, when told to ask the questions that the skill asks on its own. On twelve kinds of request, starting from one to three sentences, the skill's prompts passed 92% of the test inputs against 49% for Claude not told to ask; [docs/evaluation.md](docs/evaluation.md) has the method and the limits.
+The first version was a pipeline of five agents: it cost 3.81 to 5.52 USD and 15 to 23 minutes per prompt, and a blind judge scored its prompts no higher than one agent's; a separate red-teamer and a researcher went later, when tests showed no loss without them. What ships is one agent that asks up to three questions, writes a spec and attacks its own draft: on two agent cases its prompts passed 83% of the sessions, at 0.39 to 0.45 USD and 71 to 104 s per prompt on average. Claude without the skill passed 65% given the full notes, and 77%, close to the skill, when told to ask the questions that the skill asks on its own. On twelve kinds of request, starting from one to three sentences, the skill's prompts passed 92% of the test inputs against 49% for Claude not told to ask; [docs/evaluation.md](docs/evaluation.md) has the method and the limits.
 
 ## Example
 
@@ -89,7 +89,7 @@ Make this prompt shorter and safer: <paste the prompt, or attach the file>
 
 Claude starts the skill on its own when you ask for a prompt. In Claude Code you can also call it directly with `/prompt-engineer:refine-prompt <request>`.
 
-With Opus 5.5 a prompt takes 1 to 2 minutes of model time and 0.2 to 0.45 USD at API list prices, questions included. On a Claude plan it uses your quota.
+With Opus 5.5 a prompt takes up to about 2 minutes of model time and less than 0.50 USD at API list prices, questions included. On a Claude plan it uses your quota.
 
 ## License
 
