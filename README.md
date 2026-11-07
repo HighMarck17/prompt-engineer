@@ -91,6 +91,10 @@ Claude starts the skill on its own when you ask for a prompt. In Claude Code you
 
 With Opus 5.5 a prompt takes up to about 2 minutes of model time and less than 0.50 USD at API list prices, questions included. On a Claude plan it uses your quota.
 
+## Article
+
+[I tested my prompt-writing skill against plain Claude. Here's when it helps](https://dev.to/highmarck/i-tested-my-prompt-writing-skill-against-plain-claude-heres-when-it-helps-2ghg): what the skill does, how it was measured against Claude without it, and when it is worth using.
+
 ## License
 
 [MIT](LICENSE)
